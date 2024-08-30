@@ -1,0 +1,39 @@
+<!--Write CSS style rules to implement the following in a web page:
+- to display the content of hyperlinks with red background colour and in
+italics.
+- to display the contents of unordered lists in Times New Roman font.
+ -to display "Ocean.gif" as the background image of the page.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 7.2</title>
+    <style>
+        a {
+            background-color: red;
+            font-style: italic;
+        }
+        ul {
+            font-family: "Times New Roman", Times, serif;
+        }
+        body {
+            background-image: url('../images/ocean.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to HTML5!</h1>
+    <p>Click the<a href="#"> styled link</a> to see.</p>
+    <ul>
+        <li>List item 1</li>
+        <li>Liste item 2</li>
+        <li>Liste item 3</li>
+        <li>Liste item 4</li>
+
+    </ul>
+</body>
+</html>
