@@ -3,43 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial-6</title>
+    <title>Tutorial 6.1</title>
+
     <script>
-        function validate(event){
-            var username = document.forms["feed"]["username"].value;
-            var password = document.forms["feed"]["password"].value;
-            if(username === "")
-            {
-                  alert("empty");
-                  event.preventDefault();
-                  return false;
+        function validate(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if(!username || !password){
+                alert("username and password fields cannot be empty!");
             }
-            if(password.length < 6)
-            {
-               alert("password less than 6 letters  ");
-               event.preventDefault();
-               return false;
+            else if(password.length < 6){
+                alert("password must atleast have 6 characters!");
             }
-            alert("success");
-            return true;
+            else{
+                alert("Welcome User!");
+            }
         }
     </script>
 </head>
 <body>
-   
-<h1>Validating Textboxes</h1>
-<form name="feed">
-    <label for="username">Username</label>
-    <input type="text" name="username"  />
-    <br>
-    <br>
-    <label for="password">Password</label>
-    <input type="password" name="password" />
-    <br>
-    <br>
-    <input type="submit" value="Submit" onclick="validate(event)"/>
-</form>
+    
 
+    <form action="#">
+        <label for="username">Enter username</label>
+        <input type="text" name="" id="username">
+        
+        <br>
+        <br>
+        <br>
+
+
+        <label for="password">Enter password</label>
+        <input type="password" name="" id="password">
+
+        <br>
+        <br>
+        <br>
+
+        <input type="submit" value="submit" onclick="validate()">
+    </form>
 
 </body>
 </html>
